@@ -1,6 +1,3 @@
-# cocktail-mobile-app
-
-
 # Project description
 
 This is simple react-native movile app project for fetching drink information. App has two views which are search/main view and detailed drink view. Data is fetched from https://www.thecocktaildb.com/api.php.
