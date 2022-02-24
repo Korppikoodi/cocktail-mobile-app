@@ -1,5 +1,5 @@
-import SearchView from './components/Activities/SearchView';
-import CocktailView from './components/Activities/CocktailView';
+import SearchView from './components/Views/SearchView';
+import CocktailView from './components/Views/CocktailView';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 

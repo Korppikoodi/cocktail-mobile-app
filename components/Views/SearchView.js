@@ -1,5 +1,5 @@
 import React, {useState, useRef} from 'react';
-import { Text, TextInput, View, StyleSheet, ImageBackground, FlatList } from 'react-native';
+import { Text, TextInput, View, StyleSheet, ImageBackground, ActivityIndicator, FlatList } from 'react-native';
 import Button from '../smallerComponents/Button';
 import Drink from '../smallerComponents/Drink';
 import useFetch from '../hooks/fetch-hook';
@@ -34,8 +34,8 @@ const SearchView = ({navigation}) => {
           </Button>
         </View>  
         <View style={styles.drinks}>
-        {drinks.loading === true && <Text style={styles.bolded}>Loading</Text>}
-        {drinks.error !== null && <Text style={styles.bolded}>{drinks.error} </Text>}
+        {drinks.loading === true && <ActivityIndicator size="large" />}
+        {drinks.error !== null && <Text style={{...styles.bolded, paddingTop: 100, color: '#cc0e0e', width: '100%'}}>{drinks.error} </Text>}
         {drinks.loading === false && drinks.data.length > 0 ? 
         <FlatList
         data={drinks.data} 

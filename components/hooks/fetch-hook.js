@@ -16,6 +16,9 @@ export default function useFetch(url) {
                 setError(null)
                 const response = await fetch(url.url)
                 const json = await response.json()
+                if(json.drinks === null) {
+                    throw 'No results!'
+                }
                 setData(json.drinks)
                 setLoadin(false)
 
